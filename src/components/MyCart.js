@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-class ProductList extends Component {
+class MyCart extends Component {
     render() {
         return (
             <div>
-            Products     
+                Cart
             </div>
         )
     }
 }
-export default ProductList;
+export default MyCart;

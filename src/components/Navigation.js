@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Navbar,NavbarToggler,Collapse} from 'reactstrap';
-import {Link,NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 class Navigation extends Component {
     constructor(props) {
         super(props)
@@ -28,9 +28,9 @@ class Navigation extends Component {
                         <h2>Welcome to grocery store</h2>
                     </div>
                     <Collapse isOpen={this.state.isNavOpen} navbar>
-                   <div className='navi-product ml-auto'><Link className='navi-text' to='/'>Products</Link></div>
-                   <div className='navi-cart'><Link to='/cart' >
-                       <span className='fa fa-cart-plus'>My Cart</span>
+                   <div className='navi-product ml-auto'><Link className='navi-text hvr-underline-from-center' to='/'>Products</Link></div>
+                   <div className='navi-cart hvr-underline-from-center'><Link to='/cart' >
+                       <span className='fa fa-cart-plus '>My Cart</span>
                        </Link></div>
                    
                    </Collapse>

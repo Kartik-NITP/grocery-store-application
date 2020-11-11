@@ -6,7 +6,7 @@ import { ProductConsumer } from '../context';
 class Product extends Component {
     
     render() {
-        const {id,title,img,price,inCart} = this.props.product;
+        const {id,name,img,price,inCart} = this.props.product;
         return (
             <div className='col-7 mx-auto col-md-6 col-lg-3 my-4'>
                 <div className='card'>
@@ -15,6 +15,7 @@ class Product extends Component {
                 <div
                   className="img-container p-4"
                   onClick= {()=>value.handleDetail(id)}
+                  
                 >
                   <Link to="/details">
                     <img src={img} alt="product" height='150' width='30' className="card-img-top" />
@@ -25,7 +26,8 @@ class Product extends Component {
                     disabled={inCart ? true : false}
                     onClick={() => {
                       value.addToCart(id);
-                      value.openModal(id);
+                      
+                      
                     }}
                   >
                   {inCart ? (
@@ -41,12 +43,12 @@ class Product extends Component {
                     </ProductConsumer>
                     <div className="card-footer d-flex justify-content-between">
               <p className="align-self-center mb-0 my-font">
-                {title}
+                {name}
               </p>
-              <h3 className="mb-0 my-font">
+              <h4 className="mb-0 my-font">
                 <span className="mr-0">₹</span>
-                {price}
-              </h3>
+                {price}/kg
+              </h4>
           </div>
         </div>
                 </div>

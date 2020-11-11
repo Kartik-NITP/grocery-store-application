@@ -1,7 +1,6 @@
 :root{
   --dark: #343a40;
   --codeDark: #232528;
-  --codeYellow: #ffa400; 
 }
 body{
   font-family: sans-serif !important;
@@ -84,5 +83,21 @@ body{
 .my-font{
   font-family: 'Pacifico',sans-serif;
 }
-
-
+.lead{
+  font-family: monospace;
+  font-size: larger;
+}
+.detail-title{
+  text-align: center;
+  font-family: 'Pacifico',sans-serif;
+  color: #2098D1;
+}
+.detail-price{
+  background-color: rgb(150,150,100);
+}
+.information{
+  font-family: cursive;
+  font-size: 1.5rem;
+  font-weight: 1000;
+  font-style: italic;
+}

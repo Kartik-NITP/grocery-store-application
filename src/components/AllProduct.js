@@ -10,7 +10,7 @@ class AllProduct extends Component {
             <React.Fragment>
                 <div className='py-5'>
                     <div className='container'>
-                        <h3 className='our-products'>Our Products</h3>
+                        <h3 className='our-products'>Our Vegetables</h3>
                         <div className='row'>
                             <ProductConsumer>
                                 {value => {

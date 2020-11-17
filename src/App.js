@@ -6,6 +6,7 @@ import AllProduct from './components/AllProduct';
 import Details from './components/Details';
 import Default from './components/Default';
 import MyCart from './components/MyCart';
+import FinalPage from './FinalPage';
 class App extends Component {
   render() {
     return (
@@ -15,7 +16,7 @@ class App extends Component {
         <Route exact path='/' component={AllProduct} />
           <Route path='/details' component={Details} />
           <Route path='/cart' component={MyCart} />
-          
+          <Route path='/buy' component={FinalPage} />
           <Route component={Default} />
           </Switch>
       </React.Fragment>

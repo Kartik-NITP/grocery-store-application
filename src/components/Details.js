@@ -9,7 +9,7 @@ class Details extends Component {
             <ProductConsumer>
         {
           (value)=>{
-            const {id, img, info, price, name, inCart} = 
+            const {id, img, info, price, name} = 
             value.dataOfProducts;
             
             return (

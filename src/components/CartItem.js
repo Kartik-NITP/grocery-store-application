@@ -5,7 +5,9 @@ export default function CartItem({ item, value }) {
   const { plus, minus, remove } = value;
 
   return (
-    <div className="row my-2 text-capitalize text-center">
+    
+      
+    <div className="row my-2 text-center">
       <div className="col-10 mx-auto col-lg-2">
         <img
           src={img}
@@ -37,12 +39,13 @@ export default function CartItem({ item, value }) {
       </div>
       <div className="col-10 mx-auto col-lg-2">
         <div className="cart-icon" onClick={() => remove(id)}>
-          <i className="fas fa-trash" />
+          <i className="fa fa-remove" />
         </div>
       </div>
       <div className="col-10 mx-auto col-lg-2">
-        <strong>item total: $ {totalPrice}</strong>
+        <strong> ₹{totalPrice}</strong>
       </div>
     </div>
+    
   );
 }

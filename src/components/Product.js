@@ -6,7 +6,7 @@ import { ProductConsumer } from '../context';
 class Product extends Component {
     
     render() {
-        const {id,name,img,price,inCart} = this.props.product;
+        const {id,name,img,price,temp,inCart} = this.props.product;
         return (
             <div className='col-7 mx-auto col-md-6 col-lg-3 my-4'>
                 <div className='card'>
@@ -26,6 +26,7 @@ class Product extends Component {
                     disabled={inCart ? true : false}
                     onClick={() => {
                       value.addToCart(id);
+                      
                       
                       
                     }}

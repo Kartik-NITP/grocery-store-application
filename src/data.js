@@ -90,7 +90,7 @@ export const Data = [
       totalPrice: 0
     }
   ];
-  export const ProductData = {
+  export const DetailedProduct = {
     id: 1,
     name: "Tomato",
     img: "img/tomato.jpg",

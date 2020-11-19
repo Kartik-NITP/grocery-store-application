@@ -21,7 +21,7 @@ class CartHeading extends Component {
           Remove
         </div>
         <div className='col-10 mx-auto col-lg-2'>
-          Total Amount
+           Amount
         </div>
       </div>
             </div>

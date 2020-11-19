@@ -30,7 +30,7 @@ class Navigation extends Component {
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                    <div className='navi-product ml-auto'><Link className='navi-text hvr-underline-from-center' to='/'>Products</Link></div>
                    <div className='navi-cart hvr-underline-from-center'><Link to='/cart' >
-                       <span className='fa fa-cart-plus '>My Cart</span>
+                       <span className='fa fa-cart-plus '>Cart</span>
                        </Link></div>
                    
                    </Collapse>

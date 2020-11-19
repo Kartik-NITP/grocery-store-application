@@ -26,13 +26,11 @@ class Product extends Component {
                     disabled={inCart ? true : false}
                     onClick={() => {
                       value.addToCart(id);
-                      
-                      
-                      
+                     
                     }}
                   >
                   {inCart ? (
-                    <p className="text-capitalize mb-0 my-font" disabled>
+                    <p className="text-capitalize mb-0 my-font inCart" disabled>
                       In Cart
                     </p>
                   ) : (

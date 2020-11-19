@@ -3,7 +3,7 @@ import Product from './Product';
 import {ProductConsumer} from '../context';
 
 
-class AllProduct extends Component {
+class EveryProduct extends Component {
     
     render() {
         return (
@@ -26,4 +26,4 @@ class AllProduct extends Component {
         )
     }
 }
-export default AllProduct;
+export default EveryProduct;

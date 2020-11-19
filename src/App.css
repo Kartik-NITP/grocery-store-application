@@ -82,7 +82,10 @@ body{
 }
 .my-font{
   font-family: 'Pacifico',sans-serif;
-}
+  }
+.inCart{
+  color: green;
+  }
 .lead{
   font-family: monospace;
   font-size: larger;
@@ -107,23 +110,50 @@ body{
   font-size: 3rem;
   font-family: monospace;
 }
-.hvr-grow-shadow {
+hr.hr-color{
+  border:2px solid black;
+}
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  color: green;
+  display: block;
+  margin: 0 auto;
   text-align: center;
-  display: inline-block;
-  vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform;
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
-  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-hr.hr-color{
-  border:2px solid black;
+.buy-page-products-button{
+  top: 50%; 
+  left: 50%; 
+  transform: translateX(-50%) translateY(-50%);
+  
 }

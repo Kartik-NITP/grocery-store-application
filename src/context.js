@@ -1,25 +1,22 @@
 import React, { Component } from 'react'
-import {Data,ProductData} from './data';
+import {Data,DetailedProduct} from './data';
 const ProductContext  = React.createContext();
 class ProductProvider extends Component {
     state = {
         products:Data,
-        dataOfProducts:ProductData,
+        detailOfProducts:DetailedProduct,
         cart:[],
         cartTotal:0
         
     };
-    getProduct = (id) => {
+    getSelectedProduct = (id) => {
         const product = this.state.products.find(item=>item.id===id);
         return product;
     }
     handleDetail = (id) => {
-        
-        const product = this.getProduct(id);
-        this.setState(()=>{return {dataOfProducts:product};})
-            
-        
-    }
+        const product = this.getSelectedProduct(id);
+        this.setState(()=>{return {detailOfProducts:product};})
+}
     componentDidMount(){
       this.setProducts();
     }
@@ -35,7 +32,7 @@ class ProductProvider extends Component {
       })
     }
     addToCart = (id) => {
-        const product = this.getProduct(id);
+        const product = this.getSelectedProduct(id);
         product.inCart = true;
         product.temp = 1;
         product.totalPrice = product.price;
@@ -76,7 +73,7 @@ class ProductProvider extends Component {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
     tempCart = tempCart.filter(item=>item.id!==id);
-    const index = tempProducts.indexOf(this.getProduct(id));
+    const index = tempProducts.indexOf(this.getSelectedProduct(id));
     let removedProduct = tempProducts[index];
     removedProduct.inCart = false;
     removedProduct.temp = 0;
@@ -96,9 +93,6 @@ class ProductProvider extends Component {
       return {cart:[]};
     },()=>{this.addTotals();})
     this.setProducts();
-    
-    
-    
   }
 
   addTotals = () => {

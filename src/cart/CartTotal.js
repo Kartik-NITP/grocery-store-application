@@ -26,7 +26,7 @@ function CartTotal({value}) {
                         <strong>₹{cartTotal}</strong>
                     </h5>
                     <Link to='/buy'>
-                        <button className='btn btn-outline-primary mb-3 px-3' type='button' onClick={()=>clearCart()}>Buy</button>
+                        <button className='btn btn-outline-success mb-3 px-3' type='button' onClick={()=>clearCart()}>Buy</button>
                     </Link>
                     
                 </div>

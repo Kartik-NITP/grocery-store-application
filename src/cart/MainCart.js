@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {ProductConsumer} from '../context';
-import Empty from './Empty';
+import Empty from './EmptyCart';
 import CartList from './CartList';
 import CartHeading from './CartHeading';
 import CartTotal from './CartTotal'
